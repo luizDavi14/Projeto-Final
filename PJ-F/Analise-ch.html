@@ -1,0 +1,79 @@
+<!-- Consultar chamado -->
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALKG - Análise de Chamados</title>
+    <link rel="stylesheet" href="Analise.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="container">
+            <h1>ALKG <span>Análise de Chamados</span></h1>
+            <nav class="cabecalho-links">
+                <a href="intro-ch.html"><i class="fas fa-home"></i> Home</a>
+                <a href="Editar-ch.html"><i class="fas fa-edit"></i> Editar Chamado</a>
+                <a href="abrir-ch.html"><i class="fas fa-edit"></i> Abrir Chamado</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="analise-section">
+        <div class="container">
+            <h1>Chamados Registrados</h1>
+
+            <div class="cards-list">
+
+                <!-- CARD 1 -->
+                <div class="chamado-card">
+                    <div class="card-top">
+                        <span class="status aberto">Aberto</span>
+                        <span class="prioridade alta">Alta prioridade</span>
+                    </div>
+                    <h2>#1023 – Erro no sistema de login</h2>
+                    <p><strong>Responsável:</strong> Marcos Silva</p>
+                    <p><strong>Data:</strong> 05/11/2025</p>
+                    <a class="ver-btn" href="#">
+                        <i class="fas fa-eye"></i> Ver Detalhes
+                    </a>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="chamado-card">
+                    <div class="card-top">
+                        <span class="status andamento">Em andamento</span>
+                        <span class="prioridade media">Prioridade Média</span>
+                    </div>
+                    <h2>#1024 – Computador não liga</h2>
+                    <p><strong>Responsável:</strong> João Pedro</p>
+                    <p><strong>Data:</strong> 05/11/2025</p>
+                    <a class="ver-btn" href="#">
+                        <i class="fas fa-eye"></i> Ver Detalhes
+                    </a>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="chamado-card">
+                    <div class="card-top">
+                        <span class="status resolvido">Resolvido</span>
+                        <span class="prioridade baixa">Baixa prioridade</span>
+                    </div>
+                    <h2>#1025 – Solicitação de acesso ao sistema</h2>
+                    <p><strong>Responsável:</strong> Ana Clara</p>
+                    <p><strong>Data:</strong> 04/11/2025</p>
+                    <a class="ver-btn" href="#">
+                        <i class="fas fa-eye"></i> Ver Detalhes
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script src="Analise.js"></script>
+
+</body>
+</html>
