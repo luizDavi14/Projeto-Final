@@ -1,0 +1,689 @@
+/* Reset e configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background: linear-gradient(135deg, #1a3a8f 0%, #2c5aa0 100%);
+    color: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.cabecalho .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.cabecalho h1 span {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-left: 10px;
+    opacity: 0.9;
+}
+
+.cabecalho-links {
+    display: flex;
+    gap: 20px;
+}
+
+.cabecalho-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cabecalho-links a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Seção de Análise */
+.analise-section {
+    padding: 3rem 0;
+    min-height: calc(100vh - 200px);
+}
+
+.analise-section h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: #1a3a8f;
+    position: relative;
+}
+
+.analise-section h1:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #1a3a8f, #2c5aa0);
+    border-radius: 2px;
+}
+
+/* Lista de Cards */
+.cards-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 25px;
+    margin-top: 2rem;
+}
+
+/* Cards de Chamado */
+.chamado-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid #1a3a8f;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chamado-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.chamado-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #1a3a8f, #2c5aa0);
+}
+
+/* Topo do Card */
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Status */
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status.aberto {
+    background-color: #e8f5e8;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+.status.andamento {
+    background-color: #fff3e0;
+    color: #ef6c00;
+    border: 1px solid #ffe0b2;
+}
+
+.status.resolvido {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    border: 1px solid #bbdefb;
+}
+
+.status.fechado {
+    background-color: #f5f5f5;
+    color: #616161;
+    border: 1px solid #e0e0e0;
+}
+
+/* Prioridades */
+.prioridade {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.prioridade.alta {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+
+.prioridade.media {
+    background-color: #fff8e1;
+    color: #ff8f00;
+    border: 1px solid #ffecb3;
+}
+
+.prioridade.baixa {
+    background-color: #e8f5e8;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+/* Conteúdo do Card */
+.chamado-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #1a3a8f;
+    line-height: 1.4;
+}
+
+.chamado-card p {
+    margin-bottom: 0.8rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.chamado-card p strong {
+    color: #333;
+    min-width: 120px;
+}
+
+/* Ações do Card */
+.card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Botões de Ação */
+.btn-editar, .btn-excluir, .btn-detalhes {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.btn-editar {
+    background: linear-gradient(135deg, #1a3a8f 0%, #2c5aa0 100%);
+    color: white;
+}
+
+.btn-editar:hover {
+    background: linear-gradient(135deg, #15317a 0%, #1f4a87 100%);
+    transform: translateY(-2px);
+}
+
+.btn-excluir {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+
+.btn-excluir:hover {
+    background: #ffcdd2;
+    transform: translateY(-2px);
+}
+
+.btn-detalhes {
+    background: #e3f2fd;
+    color: #1565c0;
+    border: 1px solid #bbdefb;
+}
+
+.btn-detalhes:hover {
+    background: #bbdefb;
+    transform: translateY(-2px);
+}
+
+/* Filtros */
+.filtros-container {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+.filtros-header {
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.filtros-header h3 {
+    color: #1a3a8f;
+    font-size: 1.2rem;
+}
+
+.btn-limpar-filtros {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.btn-limpar-filtros:hover {
+    background: #f5f5f5;
+    color: #333;
+}
+
+.filtros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.filtro-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filtro-grupo label {
+    font-weight: 500;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.filtro-grupo select, .filtro-grupo input {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.filtro-grupo select:focus, .filtro-grupo input:focus {
+    outline: none;
+    border-color: #1a3a8f;
+    box-shadow: 0 0 0 2px rgba(26, 58, 143, 0.1);
+}
+
+/* Estados vazios */
+.estado-vazio {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    grid-column: 1 / -1;
+}
+
+.estado-vazio i {
+    font-size: 4rem;
+    color: #ddd;
+    margin-bottom: 1rem;
+}
+
+.estado-vazio h3 {
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.estado-vazio p {
+    color: #888;
+    margin-bottom: 1.5rem;
+}
+
+.btn-novo-chamado {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #1a3a8f 0%, #2c5aa0 100%);
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-novo-chamado:hover {
+    background: linear-gradient(135deg, #15317a 0%, #1f4a87 100%);
+    transform: translateY(-2px);
+}
+
+/* Paginação */
+.paginacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 3rem;
+}
+
+.btn-pagina {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-pagina:hover {
+    background: #f5f5f5;
+}
+
+.btn-pagina.ativa {
+    background: #1a3a8f;
+    color: white;
+    border-color: #1a3a8f;
+}
+
+/* Modal de Detalhes */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.ativo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.ativo .modal {
+    transform: scale(1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header h2 {
+    color: #1a3a8f;
+    margin: 0;
+}
+
+.btn-fechar {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.btn-fechar:hover {
+    color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cabecalho .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .cabecalho h1 {
+        text-align: center;
+    }
+    
+    .cabecalho-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .analise-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .cards-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .chamado-card {
+        padding: 1.5rem;
+    }
+    
+    .card-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .card-actions {
+        flex-direction: column;
+    }
+    
+    .filtros-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .analise-section {
+        padding: 2rem 0;
+    }
+    
+    .chamado-card h2 {
+        font-size: 1.1rem;
+    }
+    
+    .chamado-card p {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+    
+    .chamado-card p strong {
+        min-width: auto;
+    }
+    
+    .cabecalho-links a {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* === CARD DO CHAMADO (IGUAL AO DA FOTO) === */
+
+.chamado-card {
+    width: 95%;
+    max-width: 500px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px 20px;
+    border-radius: 14px;
+    border: 2px solid #2c4ea7;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.08);
+}
+
+/* Título do chamado */
+.chamado-card .id-chamado {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c4ea7;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Labels */
+.chamado-card label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 10px 0 6px;
+}
+
+/* Inputs gerais */
+.chamado-card input,
+.chamado-card select,
+.chamado-card textarea {
+    width: 100%;
+    padding: 10px 12px;
+    background: #f8f9fc;
+    border: 1px solid #d0d6e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #444;
+}
+
+.chamado-card textarea {
+    resize: none;
+    height: 70px;
+}
+
+/* === INPUTS LADO A LADO (STATUS E PRIORIDADE) === */
+.status-prioridade {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Inputs individuais */
+.status-input,
+.prioridade-input {
+    width: 100%;
+    padding: 10px;
+    background: #f5f7fc;
+    border: 1px solid #cfd5e2;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+/* === BOTÕES === */
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.delete-btn {
+    background: #e3e3e3;
+    color: #333;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    width: 48%;
+    font-weight: 600;
+}
+
+.salvar-btn {
+    background: #2c4ea7;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    width: 48%;
+    font-weight: 600;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 480px) {
+    .chamado-card {
+        width: 92%;
+        padding: 20px 15px;
+    }
+
+    .status-prioridade {
+        grid-template-columns: 1fr;
+    }
+
+    .delete-btn,
+    .salvar-btn {
+        width: 100%;
+    }
+}
