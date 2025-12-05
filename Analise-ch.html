@@ -1,89 +1,35 @@
-<!DOCTYPE html>
+<!-- Consultar chamado -->
+ <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abrir Chamado - ALKG</title>
-
-    <link rel="stylesheet" href="abrir.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <title>ALKG - Análise de Chamados</title>
+    <link rel="stylesheet" href="Analise.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
-    <!-- CABEÇALHO -->
-    <div class="cabecalho">
+    <header class="cabecalho">
         <div class="container">
-            <h1>ALKG <span>Abrir Chamado</span></h1>
+            <h1>ALKG <span>Análise de Chamados</span></h1>
             <nav class="cabecalho-links">
                 <a href="index.html"><i class="fas fa-home"></i> Home</a>
-                <a href="Analise-ch.html"><i class="fas fa-list"></i> Ver Chamados</a>
-                <a href="Editar-ch.html"><i class="fas fa-edit"></i> Editar Chamados</a>
-
-
+                <a href="Editar-ch.html"><i class="fas fa-edit"></i> Editar Chamado</a>
+                <a href="abrir-ch.html"><i class="fas fa-edit"></i> Abrir Chamado</a>
             </nav>
         </div>
-    </div>
+    </header>
 
-    <!-- CONTEÚDO PRINCIPAL -->
-    <div class="abrir-container">
-        <div class="card-abrir">
-
-            <h2><i class="fas fa-ticket-alt"></i> Abrir Novo Chamado</h2>
-            <p class="texto-info">Preencha as informações abaixo e nossa equipe entrará em ação.</p>
-
-            <!-- FORMULÁRIO sem label -->
-            <div class="form-group">
-                <input type="text" class="input" placeholder="Seu Nome">
-            </div>
-
-            <div class="form-group">
-                <input type="email" class="input" placeholder="Seu E-mail">
-            </div>
-
-            <div class="form-group">
-                <input type="text" class="input" placeholder="Título do Chamado">
-            </div>
-
-            <div class="form-group">
-                <select class="input">
-                    <option disabled selected>Tipo de Problema</option>
-                    <option>Erro no Sistema</option>
-                    <option>Problemas de Acesso</option>
-                    <option>Solicitação de Suporte</option>
-                    <option>Instabilidade</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <select class="input">
-                    <option disabled selected>Prioridade</option>
-                    <option>Baixa</option>
-                    <option>Média</option>
-                    <option>Alta</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <textarea class="input textarea" placeholder="Descreva o problema com detalhes..."></textarea>
-            </div>
-
-            <button class="btn-enviar">
-                <i class="fas fa-paper-plane"></i> Enviar Chamado
-            </button>
-
-        </div>
-    </div>
-
-    <!-- RODAPÉ -->
-    <footer>
+    <section class="analise-section">
         <div class="container">
-            <p>&copy; 2023 ALKG - Gestão Inteligente. Todos os direitos reservados.</p>
+            <h1>Chamados Registrados</h1>
+
+            <div class="cards-list"></div>
         </div>
-    </footer>
-    <script src="Abrir.js"></script>
+    </section>
+    <script src="Analise.js"></script>
+
 </body>
 </html>
