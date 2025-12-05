@@ -42,8 +42,8 @@ body {
 
 .cabecalho h1 span {
     font-weight: 300;
-    font-size: 1rem;
-    margin-left: 10px;
+    font-size: 0.83rem;
+    margin-left: 5px;
     opacity: 0.9;
 }
 
@@ -261,4 +261,5 @@ footer {
     .servicos h2, .beneficios h2 {
         font-size: 1.8rem;
     }
+
 }
