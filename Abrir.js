@@ -1,10 +1,12 @@
 const inputs = document.querySelectorAll('.input');
 const btnCriar = document.querySelector('.btn-enviar');
+
 const inputNome = inputs[0];
 const inputEmail = inputs[1];
 const inputTitulo = inputs[2];
 const inputTipo = inputs[3];
-const inputDescricao = inputs[4];
+const inputPrioridade = inputs[4];
+const inputDescricao = inputs[5];
 
 btnCriar.addEventListener('click', criarChamado);
 
@@ -14,8 +16,9 @@ function criarChamado() {
     const titulo = inputTitulo.value.trim();
     const tipo = inputTipo.value;
     const descricao = inputDescricao.value.trim();
+    const prioridade = inputPrioridade.value;
 
-    if (nome === "" || email === "" || titulo === "" || tipo === "Tipo de Problema" || descricao === "") {
+    if (nome === "" || email === "" || titulo === "" || tipo === "" || descricao === "" || prioridade === ""){
         alert("Preencha todos os campos!");
         return;
     }
@@ -23,24 +26,25 @@ function criarChamado() {
     const chamados = JSON.parse(localStorage.getItem("chamados")) || [];
 
     chamados.push({
-        id: Date.now(),        
+        id: Date.now(),
         nome,
         email,
         titulo,
         tipo,
         descricao,
-        status: "Aberto",      
-        prioridade: "Média",   
+        prioridade,
+        status: "Aberto",
         data: new Date().toLocaleDateString("pt-BR")
     });
 
     localStorage.setItem("chamados", JSON.stringify(chamados));
 
     alert("Chamado criado com sucesso!");
-    
+
     inputNome.value = "";
     inputEmail.value = "";
     inputTitulo.value = "";
     inputTipo.selectedIndex = 0;
+    inputPrioridade.selectedIndex = 0;
     inputDescricao.value = "";
 }
