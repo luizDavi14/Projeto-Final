@@ -246,7 +246,7 @@ body {
 }
 
 /* Botões de Ação */
-.btn-editar, .btn-excluir, .btn-detalhes {
+.btn-editar, .delete-btn, .btn-detalhes {
     flex: 1;
     padding: 10px;
     border: none;
@@ -272,13 +272,13 @@ body {
     transform: translateY(-2px);
 }
 
-.btn-excluir {
+.delete-btn {
     background: #ffebee;
     color: #c62828;
     border: 1px solid #ffcdd2;
 }
 
-.btn-excluir:hover {
+.delete-btn:hover {
     background: #ffcdd2;
     transform: translateY(-2px);
 }
