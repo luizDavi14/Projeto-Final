@@ -687,3 +687,17 @@ body {
         width: 100%;
     }
 }
+
+/* Footer */
+footer {
+    background-color: #1a3a8f;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+footer p {
+    opacity: 0.9;
+    font-weight: 300;
+}
