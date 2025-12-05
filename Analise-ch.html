@@ -1,79 +1,89 @@
-<!-- Consultar chamado -->
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALKG - Análise de Chamados</title>
-    <link rel="stylesheet" href="Analise.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Abrir Chamado - ALKG</title>
+
+    <link rel="stylesheet" href="abrir.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
-    <header class="cabecalho">
+    <!-- CABEÇALHO -->
+    <div class="cabecalho">
         <div class="container">
-            <h1>ALKG <span>Análise de Chamados</span></h1>
+            <h1>ALKG <span>Abrir Chamado</span></h1>
             <nav class="cabecalho-links">
                 <a href="index.html"><i class="fas fa-home"></i> Home</a>
-                <a href="Editar-ch.html"><i class="fas fa-edit"></i> Editar Chamado</a>
-                <a href="abrir-ch.html"><i class="fas fa-edit"></i> Abrir Chamado</a>
+                <a href="Analise-ch.html"><i class="fas fa-list"></i> Ver Chamados</a>
+                <a href="Editar-ch.html"><i class="fas fa-edit"></i> Editar Chamados</a>
+
+
             </nav>
         </div>
-    </header>
+    </div>
 
-    <section class="analise-section">
-        <div class="container">
-            <h1>Chamados Registrados</h1>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="abrir-container">
+        <div class="card-abrir">
 
-            <div class="cards-list">
+            <h2><i class="fas fa-ticket-alt"></i> Abrir Novo Chamado</h2>
+            <p class="texto-info">Preencha as informações abaixo e nossa equipe entrará em ação.</p>
 
-                <!-- CARD 1 -->
-                <div class="chamado-card">
-                    <div class="card-top">
-                        <span class="status aberto">Aberto</span>
-                        <span class="prioridade alta">Alta prioridade</span>
-                    </div>
-                    <h2>#1023 – Erro no sistema de login</h2>
-                    <p><strong>Responsável:</strong> Marcos Silva</p>
-                    <p><strong>Data:</strong> 05/11/2025</p>
-                    <a class="ver-btn" href="#">
-                        <i class="fas fa-eye"></i> Ver Detalhes
-                    </a>
-                </div>
-
-                <!-- CARD 2 -->
-                <div class="chamado-card">
-                    <div class="card-top">
-                        <span class="status andamento">Em andamento</span>
-                        <span class="prioridade media">Prioridade Média</span>
-                    </div>
-                    <h2>#1024 – Computador não liga</h2>
-                    <p><strong>Responsável:</strong> João Pedro</p>
-                    <p><strong>Data:</strong> 05/11/2025</p>
-                    <a class="ver-btn" href="#">
-                        <i class="fas fa-eye"></i> Ver Detalhes
-                    </a>
-                </div>
-
-                <!-- CARD 3 -->
-                <div class="chamado-card">
-                    <div class="card-top">
-                        <span class="status resolvido">Resolvido</span>
-                        <span class="prioridade baixa">Baixa prioridade</span>
-                    </div>
-                    <h2>#1025 – Solicitação de acesso ao sistema</h2>
-                    <p><strong>Responsável:</strong> Ana Clara</p>
-                    <p><strong>Data:</strong> 04/11/2025</p>
-                    <a class="ver-btn" href="#">
-                        <i class="fas fa-eye"></i> Ver Detalhes
-                    </a>
-                </div>
-
+            <!-- FORMULÁRIO sem label -->
+            <div class="form-group">
+                <input type="text" class="input" placeholder="Seu Nome">
             </div>
-        </div>
-    </section>
-    <script src="Analise.js"></script>
 
+            <div class="form-group">
+                <input type="email" class="input" placeholder="Seu E-mail">
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="input" placeholder="Título do Chamado">
+            </div>
+
+            <div class="form-group">
+                <select class="input">
+                    <option disabled selected>Tipo de Problema</option>
+                    <option>Erro no Sistema</option>
+                    <option>Problemas de Acesso</option>
+                    <option>Solicitação de Suporte</option>
+                    <option>Instabilidade</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <select class="input">
+                    <option disabled selected>Prioridade</option>
+                    <option>Baixa</option>
+                    <option>Média</option>
+                    <option>Alta</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <textarea class="input textarea" placeholder="Descreva o problema com detalhes..."></textarea>
+            </div>
+
+            <button class="btn-enviar">
+                <i class="fas fa-paper-plane"></i> Enviar Chamado
+            </button>
+
+        </div>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 ALKG - Gestão Inteligente. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="Abrir.js"></script>
 </body>
 </html>
